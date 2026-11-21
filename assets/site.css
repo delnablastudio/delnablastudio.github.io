@@ -67,9 +67,10 @@ p:last-child { margin-bottom: 0; }
 
 /* type */
 h1, h2, h3 { font-family: var(--pixel); font-weight: 400; margin: 0; text-wrap: balance; }
-.display { font-size: clamp(16px, 5.2vw, 34px); line-height: 1.35; letter-spacing: 0.5px; white-space: nowrap; }
+.display { font-size: clamp(16px, 5.2vw, 34px); line-height: 1.35; letter-spacing: 0.5px; white-space: nowrap;
+  padding-left: calc(0.125em + 0.5px); }   /* (the pixel font leaves a blank column right of each letter: balance it so the name is truly centered) */
 .eyebrow { font-size: 13px; line-height: 1.5; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); text-align: center; margin-bottom: var(--s5); }
-.lede { font-size: 20px; line-height: 1.6; color: var(--ink-faint); max-width: 30em; margin: var(--s5) auto 0; text-wrap: balance; }
+.lede { font-size: 20px; line-height: 1.6; color: var(--ink-faint); max-width: 25em; margin: var(--s6) auto 0; text-wrap: balance; }
 
 /* hero */
 .hero { padding: var(--s8) 0 var(--s7); text-align: center; }
