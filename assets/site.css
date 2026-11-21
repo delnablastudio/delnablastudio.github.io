@@ -1,0 +1,98 @@
+/* DEL Nabla Studio: the Word Gates pixel look (paper, ink, word colors). */
+:root {
+  --paper: #FFF6E5;
+  --paper-deep: #F6E3CF;
+  --card: #FFFBF3;
+  --ink: #2E2433;
+  --ink-faint: #6E6259;
+  --line: #3B3040;
+  --pink: #F49AAE;
+  --blue: #94C0F0;
+  --yellow: #F6D982;
+  --green: #9FDCA6;
+  --violet: #D3AAEE;
+  --teal: #86D6CF;
+  --pixel: "Press Start 2P", ui-monospace, monospace;
+  --sans: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1F1A24;
+    --paper-deep: #2A2331;
+    --card: #2A2331;
+    --ink: #F6EEE4;
+    --ink-faint: #B9AEA4;
+    --line: #5A4D63;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 var(--sans);
+}
+a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: var(--pink); }
+a:hover { text-decoration-color: var(--blue); }
+img { max-width: 100%; height: auto; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+/* top bar */
+.bar { border-bottom: 3px solid var(--line); background: var(--paper-deep); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 12px/1 var(--pixel); letter-spacing: 0.5px; }
+.brand .nabla { display: inline-grid; place-items: center; width: 34px; height: 34px; flex: none; background: var(--pink); border: 3px solid var(--line); }
+.brand .logo { width: 16px; height: 20px; color: #2E2433; }
+.bar nav { display: flex; gap: 18px; font-size: 15px; }
+.bar nav a { text-decoration: none; }
+.bar nav a:hover, .bar nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--pink); }
+
+/* headings */
+h1, h2, h3 { font-family: var(--pixel); font-weight: 400; line-height: 1.5; }
+h1 { font-size: 22px; margin: 0 0 16px; }
+h2 { font-size: 15px; margin: 44px 0 14px; }
+h3 { font-size: 12px; margin: 28px 0 10px; }
+@media (min-width: 640px) { h1 { font-size: 28px; } h2 { font-size: 17px; } }
+
+/* hero: the game's letter tiles */
+.hero { padding: 48px 0 24px; text-align: center; }
+.tiles { display: flex; justify-content: center; flex-wrap: wrap; gap: clamp(4px, 1.2vw, 6px); margin: 0 auto 10px; }
+.tiles span {
+  display: grid; place-items: center;
+  width: clamp(24px, 7.2vw, 46px); aspect-ratio: 1;
+  font: clamp(10px, 3vw, 20px)/1 var(--pixel); color: #2E2433;
+  border: 3px solid var(--line); box-shadow: 0 4px 0 var(--line);
+}
+.tiles .gap { width: clamp(6px, 2vw, 14px); border: 0; box-shadow: none; }
+.tiles .p { background: var(--pink); } .tiles .b { background: var(--blue); }
+.tiles .y { background: var(--yellow); } .tiles .g { background: var(--green); }
+.tiles .v { background: var(--violet); } .tiles .t { background: var(--teal); }
+.lede { font-size: 19px; color: var(--ink-faint); max-width: 34em; margin: 18px auto 0; }
+
+/* game card */
+.game { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center;
+  background: var(--card); border: 3px solid var(--line); box-shadow: 0 6px 0 var(--line); padding: 22px; margin: 36px 0; }
+@media (min-width: 640px) { .game { grid-template-columns: 160px 1fr; } }
+.game img { width: 160px; justify-self: center; }  /* (the icon has its own frame) */
+.game h2 { margin-top: 0; }
+.game p { margin: 0 0 12px; }
+.stores { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.btn { display: inline-block; padding: 10px 16px; border: 3px solid var(--line); box-shadow: 0 4px 0 var(--line);
+  background: var(--blue); color: #2E2433; text-decoration: none; font-weight: 600; }
+.badge { display: inline-block; line-height: 0; }
+.badge img { height: 56px; width: auto; }
+.btn.soon { background: var(--paper-deep); color: var(--ink-faint); box-shadow: none; cursor: default; }
+
+/* text pages */
+.doc { padding-top: 40px; padding-bottom: 20px; }
+.doc .meta { color: var(--ink-faint); margin-top: -6px; }
+.doc ul { padding-left: 22px; }
+.doc li { margin: 6px 0; }
+.note { background: var(--card); border: 3px solid var(--line); padding: 14px 18px; margin: 20px 0; }
+
+footer { border-top: 3px solid var(--line); margin-top: 56px; padding: 22px 0 36px; color: var(--ink-faint); font-size: 15px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+footer nav { display: flex; gap: 16px; flex-wrap: wrap; }
