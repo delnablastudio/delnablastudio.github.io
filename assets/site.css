@@ -5,7 +5,7 @@
      eyebrow   section headings   pixel 13px, letter-spaced, faint
      title     card and page h3   pixel 13px
      page h1   support, privacy   pixel 24px (18px on phones)
-     lede      tagline            Work Sans 18px / 1.55, three tapering lines under the name
+     lede      tagline            Work Sans 18px / 1.55, tapering lines under the name
      body      everything else    Work Sans 17px / 1.65
      small     notes, footer      Work Sans 14px / 1.5
    Space: one scale, used everywhere: 4 8 12 16 24 32 48 64 px.
@@ -70,9 +70,11 @@ h1, h2, h3 { font-family: var(--pixel); font-weight: 400; margin: 0; text-wrap: 
 .display { font-size: clamp(16px, 5.2vw, 34px); line-height: 1.35; letter-spacing: 0.5px; white-space: nowrap;
   padding-left: calc(0.125em + 0.5px); }   /* (the pixel font leaves a blank column right of each letter: balance it so the name is truly centered) */
 .eyebrow { font-size: 13px; line-height: 1.5; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); text-align: center; margin-bottom: var(--s5); }
-.lede { font-size: 18px; line-height: 1.55; color: var(--ink-faint); max-width: 32em; margin: var(--s4) auto 0; text-wrap: balance; }
-/* on wider screens the tagline tapers in three lines under the name, like its shadow */
-@media (min-width: 640px) { .lede span { display: block; } }
+.lede { font-size: clamp(14px, 4.6vw, 18px); line-height: 1.55; color: var(--ink-faint); margin: var(--s4) auto 0; }
+/* the tagline tapers under the name like its shadow: four lines on a phone,
+   three on wider screens (each <br> belongs to one of the two) */
+.lede br.d { display: none; }
+@media (min-width: 640px) { .lede { font-size: 18px; } .lede br.m { display: none; } .lede br.d { display: inline; } }
 
 /* hero */
 .hero { padding: var(--s8) 0 var(--s7); text-align: center; }
