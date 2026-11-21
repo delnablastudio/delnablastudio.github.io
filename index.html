@@ -4,13 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DEL Nabla Studio</title>
-<meta name="description" content="DEL Nabla Studio makes small, thoughtful puzzle games. Our first game is Word Gates, a word puzzle where letters slide into gates to spell answers to clues.">
+<meta name="description" content="DEL Nabla Studio is an independent studio making small, thoughtful puzzle games, starting with Word Gates.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -27,35 +25,39 @@
 
 <main class="wrap">
   <section class="hero">
-    <div class="tiles" aria-hidden="true">
-      <span class="p">W</span><span class="b">O</span><span class="y">R</span><span class="g">D</span>
-      <span class="gap"></span>
-      <span class="v">G</span><span class="t">A</span><span class="p">T</span><span class="b">E</span><span class="y">S</span>
-    </div>
-    <h1>DEL Nabla Studio</h1>
-    <p class="lede">We make small, thoughtful puzzle games that are easy to pick up and hard to put down.</p>
+    <h1 class="display">DEL Nabla Studio</h1>
+    <p class="lede">An independent studio making small, thoughtful puzzle games that are easy to pick up and hard to put down.</p>
   </section>
 
-  <section class="game" id="word-gates">
-    <img src="assets/word-gates-icon.png" alt="Word Gates app icon" width="160" height="160">
-    <div>
-      <h2>Word Gates</h2>
-      <p>Read the clue, then slide letters across the board and through the matching gate to spell the answer. Each move counts, so plan your path, clear the blocks in the way, and finish with moves to spare for three stars.</p>
-      <p>Thousands of levels across themed chapters, a daily challenge that's the same for everyone, and eight looks to unlock as you play. No account needed, and your progress stays on your device.</p>
-      <div class="stores">
-        <span class="btn soon">Google Play: coming soon</span>
-        <span class="btn soon">App Store: coming soon</span>
-        <!-- At launch, swap the two lines above for the official badges
-             (saved in assets/ from Google's and Apple's badge pages):
-        <a class="badge" href="https://play.google.com/store/apps/details?id=com.nabla.wordgates"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="56"></a>
-        <a class="badge" href="APP_STORE_LINK"><img src="assets/app-store-badge.svg" alt="Download on the App Store" height="56"></a>
-        -->
-      </div>
+  <section class="section">
+    <h2 class="eyebrow">Our games</h2>
+    <div class="games">
+      <article class="card" id="word-gates">
+        <img class="card-art" src="assets/word-gates-icon.png" alt="Word Gates app icon" width="96" height="96">
+        <h3 class="tiles" aria-label="Word Gates"><span class="row" aria-hidden="true"><span class="p">W</span><span class="b">O</span><span class="y">R</span><span class="g">D</span></span><span class="row" aria-hidden="true"><span class="v">G</span><span class="t">A</span><span class="p">T</span><span class="b">E</span><span class="y">S</span></span></h3>
+        <p class="card-text">A word puzzle with a sliding twist. Read the clue, then slide each letter out through its gate to spell the answer in as few moves as you can.</p>
+        <div class="stores">
+          <!-- At launch, wrap each badge in a link to the game's store page:
+               Google Play: https://play.google.com/store/apps/details?id=com.delnablastudio.wordgates
+               App Store: the link App Store Connect gives you -->
+          <img class="badge" src="assets/google-play-badge.png" alt="Google Play" width="142" height="42">
+          <img class="badge" src="assets/app-store-badge.png" alt="App Store" width="138" height="42">
+        </div>
+        <p class="card-note">Coming soon</p>
+      </article>
+      <article class="card card-next">
+        <span class="card-art placeholder" aria-hidden="true">?</span>
+        <h3 class="card-title">Next game</h3>
+        <p class="card-text">Already in the works. Write to us and we'll tell you when it's out.</p>
+      </article>
     </div>
   </section>
 
-  <h2>Contact</h2>
-  <p>Questions, bug reports or ideas? Email <a href="mailto:nabladelstudio@gmail.com">nabladelstudio@gmail.com</a>. We read every message.</p>
+  <section class="section contact">
+    <h2 class="eyebrow">Contact</h2>
+    <p>Questions, bug reports or ideas? We read every message.</p>
+    <p><a class="mail" href="mailto:nabladelstudio@gmail.com">nabladelstudio@gmail.com</a></p>
+  </section>
 </main>
 
 <footer>
